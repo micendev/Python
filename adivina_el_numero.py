@@ -5,7 +5,7 @@ def adivina_el_número_computadora(x):
 
     print("=============================")
     print("  ¡Bienvenido(a) al Juego!  ")
-    print("============================")
+    print("=============================")
     print(f"Selecciona un número entre 1 y {x} para que la computadora intente adivinarlo.")
 
     # Intervalo de valores válidos
