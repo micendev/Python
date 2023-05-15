@@ -33,4 +33,7 @@ def adivina_el_número_computadora(x):
     print(f"¡Siii! La computadora adivinó tu número correctamente: {predicción}")
 
 
-adivina_el_número_computadora(10)
+#adivina_el_número_computadora(10)
+
+if __name__ == "__main__":
+    adivina_el_número_computadora(10)
