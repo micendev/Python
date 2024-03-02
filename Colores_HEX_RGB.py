@@ -5,34 +5,40 @@
 
 import re
 
-def hex_to_rgb(hex: str) -> tuple:
+def convertion(hex_to_rgb, rgb_to_hex):
 
-    hex = hex.lstrip("#")
+    def hex_to_rgb(hex: str) -> tuple:
 
-    regex = re.compile(r"^[0-9a-fA-F]{6}$")
-    if regex.match(hex):
+        hex = hex.lstrip("#")
 
-        r = int(hex[0:2], 16)
-        g = int(hex[2:4], 16)
-        b = int(hex[4:6], 16)
+        regex = re.compile(r"^[0-9a-fA-F]{6}$")
+        if regex.match(hex):
 
-        return f"La conversión de #{hex} es: {(r, g, b)}"
+            r = int(hex[0:2], 16)
+            g = int(hex[2:4], 16)
+            b = int(hex[4:6], 16)
+
+            return f"La conversión de #{hex} es: {(r, g, b)}"
     
-    return 'No existe'
+        return 'No existe'
 
 
-def rgb_to_hex(r: int, g: int, b: int) -> str:
+    def rgb_to_hex(r: int, g: int, b: int) -> str:
 
-    r = max(0, min(255, r))
-    g = max(0, min(255, g))
-    b = max(0, min(255, b))
+        r = max(0, min(255, r))
+        g = max(0, min(255, g))
+        b = max(0, min(255, b))
 
-    return f"La conversión de {r,g,b} es: #{r:02x}{g:02x}{b:02x}"
+        return f"La conversión de {r,g,b} es: #{r:02x}{g:02x}{b:02x}"
 
-print(hex_to_rgb("#ffffff"))
-print(hex_to_rgb("#000000"))
-print(hex_to_rgb("#fabada"))
-print(rgb_to_hex(0, 0, 0))
-print(rgb_to_hex(255, 255, 255))
-print(rgb_to_hex(250, 186, 218))
-print(rgb_to_hex(255, 255, 0))
+    print(hex_to_rgb("#ffffff"))
+    print(hex_to_rgb("#000000"))
+    print(hex_to_rgb("#fabada"))
+    print(rgb_to_hex(0, 0, 0))
+    print(rgb_to_hex(255, 255, 255))
+    print(rgb_to_hex(250, 186, 218))
+    print(rgb_to_hex(255, 255, 0))
+
+
+if __name__ == "__main__":
+    convertion(hex_to_rgb="", rgb_to_hex="")
