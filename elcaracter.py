@@ -22,8 +22,9 @@ def infiltrated_characters(first_text: str, second_text:str) -> list:
 
     return characters
 
-
-print(infiltrated_characters("Me llamo Pablo Perez", "Me llemo Pablo Peres"))
-print(infiltrated_characters("Una playa linda", "Una playa linde "))
+def result():
+    print(infiltrated_characters("Me llamo Pablo Perez", "Me llemo Pablo Peres"))
+    print(infiltrated_characters("Una playa linda", "Una playa linde "))
  
- 
+if __name__ == "__main__":
+     result()
